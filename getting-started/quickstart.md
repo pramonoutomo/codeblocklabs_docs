@@ -1,27 +1,51 @@
 ---
-icon: bullseye-arrow
+icon: power-off
 ---
 
-# Quickstart
+# What is Node?
 
-<figure><img src="https://gitbookio.github.io/onboarding-template-images/quickstart-hero.png" alt=""><figcaption></figcaption></figure>
+A blockchain node is a device or computer that participates in a blockchain network by maintaining a copy of the blockchain ledger and processing transactions. These nodes perform essential functions that support the decentralized and secure nature of the blockchain.
 
-Beautiful documentation starts with the content you create — and GitBook makes it easy to get started with any pre-existing content.
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Blockchain</p></figcaption></figure>
+
+Here’s a breakdown of the key roles and types of blockchain nodes:
+
+#### 1. **Full Nodes**
+
+* **Definition**: These nodes store the entire history of the blockchain. They validate transactions and blocks by checking them against the blockchain's rules.
+* **Function**: They ensure the network's integrity by rejecting invalid transactions and blocks. They also broadcast verified data to other nodes.
+* **Example**: Bitcoin and Ethereum full nodes.
+
+#### 2. **Lightweight Nodes (Light Clients)**
+
+* **Definition**: These nodes do not store the full blockchain but rely on full nodes to verify transactions. They store only essential data (like block headers) and request specific information when needed.
+* **Function**: They allow users to interact with the blockchain without the need for large storage or extensive processing power.
+* **Example**: Wallet apps like MetaMask for Ethereum.
+
+#### 3. **Mining Nodes**
+
+* **Definition**: These nodes are full nodes with the added responsibility of mining (proof of work) or validating blocks (proof of stake).
+* **Function**: They participate in the process of creating new blocks by solving complex mathematical problems (in proof of work) or validating based on staked assets (in proof of stake).
+
+#### 4. **Validator Nodes**
+
+* **Definition**: Used primarily in proof-of-stake (PoS) blockchains, validator nodes verify and validate new transactions and propose new blocks.
+* **Function**: They maintain the security and operation of PoS blockchains by staking tokens and voting on block proposals.
+
+#### 5. **Archive Nodes**
+
+* **Definition**: Similar to full nodes but store additional historical data beyond the latest state of the blockchain.
+* **Function**: These nodes provide detailed historical data for developers, researchers, or services that need access to the complete history of transactions and contracts.
+
+#### Key Functions of Blockchain Nodes:
+
+* **Transaction Verification**: Nodes verify that transactions follow the rules of the blockchain (e.g., ensuring the sender has enough funds).
+* **Block Validation**: Full nodes check each new block to confirm it adheres to consensus rules before adding it to their copy of the blockchain.
+* **Propagation of Data**: Nodes share data (blocks, transactions) with other nodes to maintain network synchronization.
+* **Network Security**: Nodes contribute to the decentralized nature of the network, making it harder for a single entity to control the blockchain.
+
+Nodes are essential for maintaining decentralization and transparency in blockchain systems, ensuring that no single party can control the entire ledger or manipulate transactions.
 
 {% hint style="info" %}
-Want to learn about writing content from scratch? Head to the [Basics](https://github.com/GitbookIO/onboarding-template/blob/main/getting-started/broken-reference/README.md) section to learn more.
+Every blockchain has a different nodes type, some has only mining/validator nodes, some has Full and Light nodes only and many others.
 {% endhint %}
-
-### Import
-
-GitBook supports importing content from many popular writing tools and formats. If your content already exists, you can upload a file or group of files to be imported.
-
-<div data-full-width="false">
-
-<figure><img src="https://gitbookio.github.io/onboarding-template-images/quickstart-import.png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
-### Sync a repository
-
-GitBook also allows you to set up a bi-directional sync with an existing repository on GitHub or GitLab. Setting up Git Sync allows you and your team to write content in GitBook or in code, and never have to worry about your content becoming out of sync.
