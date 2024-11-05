@@ -6,7 +6,7 @@ icon: power-off
 
 A blockchain node is a device or computer that participates in a blockchain network by maintaining a copy of the blockchain ledger and processing transactions. These nodes perform essential functions that support the decentralized and secure nature of the blockchain.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Blockchain</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Blockchain</p></figcaption></figure>
 
 Here’s a breakdown of the key roles and types of blockchain nodes:
 

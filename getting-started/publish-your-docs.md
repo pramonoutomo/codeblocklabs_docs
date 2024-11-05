@@ -12,7 +12,7 @@ Blockchain technology is at the heart of many decentralized applications (dApps)
 2. **Control**: A node gives you full control over which data you access, directly from the blockchain. You’re no longer dependent on intermediaries.
 3. **Participation in Consensus**: Some blockchains, like Proof of Stake (PoS) systems, allow node operators to participate in consensus and potentially earn rewards.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Prerequisites
 

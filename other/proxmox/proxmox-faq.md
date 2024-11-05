@@ -26,7 +26,7 @@ sudo nano /etc/ssh/sshd_config
 
 ***
 
-Q: I can't connect my local machine from outside (i have my public ip setup already to the machine), I want to use 1 ip for all vm/ct.\
+Q: I can't connect my local machine from outside (i have my public ip setup already to the machine), I want to use 1 ip for all vm/ct. or vm can't connect to internet.\
 A: Use port forwarding to make it possible.
 -------------------------------------------
 
