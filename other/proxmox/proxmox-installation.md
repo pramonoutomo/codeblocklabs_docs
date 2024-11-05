@@ -99,7 +99,7 @@ create new file firewall.sh
 
 ```
 #!/bin/bash
-/usr/sbin/iptables -t nat -A POSTROUTING -j MASQUERADE
+/usr/sbin/iptables -t nat -A POSTROUTING -s 192.168.100.0/24 -o vmbr0 -j MASQUERADE
 /usr/sbin/iptables -t nat -A PREROUTING -p tcp -d 0.0.0.0/0 --dport 20002 -j DNAT --to-destination 192.168.110.150:20002
 /usr/sbin/iptables -t nat -A PREROUTING -p tcp -d 0.0.0.0/0 --dport 20620 -j DNAT --to-destination 192.168.110.151:20620
 /usr/sbin/iptables -t nat -A PREROUTING -p tcp -d 0.0.0.0/0 --dport 20619 -j DNAT --to-destination 192.168.110.151:20619
