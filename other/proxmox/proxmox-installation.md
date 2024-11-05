@@ -92,7 +92,8 @@ apt full-upgrade  # Update system
 iptables -t nat -A POSTROUTING -s 192.168.100.0/24 -o vmbr0 -j MASQUERADE
 ```
 
-8. add your forward port and setting ip automatically by using cron&#x20;
+8. &#x20;use `chmod firewall.sh` to make it executable
+9. add your forward port and setting ip automatically by using cron
 
 create new file firewall.sh
 
