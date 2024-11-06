@@ -21,7 +21,10 @@ sudo nano /etc/ssh/sshd_config
 // PermitRootLogin without-password
 // to
 // PermitRootLogin yes
-// And then save the file, CTRL+X , Y , Enter
+// Remove the // before the PermitRootLogin, save the file, CTRL+X , Y , Enter
+
+// Restart sshd services with command below
+sudo systemctl restart sshd
 ```
 
 ***
