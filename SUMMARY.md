@@ -39,3 +39,4 @@
 * [Proxmox](other/proxmox/README.md)
   * [Proxmox Installation](other/proxmox/proxmox-installation.md)
   * [Proxmox FAQ](other/proxmox/proxmox-faq.md)
+* [NodeJS](other/nodejs.md)
