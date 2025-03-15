@@ -7,29 +7,26 @@
 * [What is Node?](getting-started/quickstart.md)
 * [Your First Nodes](getting-started/publish-your-docs.md)
 
-## Mainnet
+## Blockchain Nodes
 
-* [Banano](mainnet/editor/README.md)
-  * [Installation](mainnet/editor/installation.md)
-  * [Node Configuration](mainnet/editor/node-configuration.md)
-  * [RPC Command](mainnet/editor/rpc-command.md)
-  * [Cli Command](mainnet/editor/cli-command.md)
-  * [Other](mainnet/editor/other.md)
-* [RaiBlocksOne](mainnet/editor-1/README.md)
-  * [Installation](mainnet/editor-1/installation.md)
-  * [RPC Command](mainnet/editor-1/rpc-command.md)
-  * [Other](mainnet/editor-1/other.md)
-* [RaiCoin](mainnet/editor-2/README.md)
-  * [Installation](mainnet/editor-2/installation.md)
-  * [Node Configuration](mainnet/editor-2/node-configuration.md)
-  * [RPC Command](mainnet/editor-2/rpc-command.md)
-  * [Other](mainnet/editor-2/other.md)
-
-## Testnet
-
-* [BlockX](testnet/editor/README.md)
-  * [Installation](testnet/editor/installation.md)
-  * [Useful Command](testnet/editor/useful-command.md)
+* [Banano](blockchain-nodes/editor/README.md)
+  * [Installation](blockchain-nodes/editor/installation.md)
+  * [Node Configuration](blockchain-nodes/editor/node-configuration.md)
+  * [RPC Command](blockchain-nodes/editor/rpc-command.md)
+  * [Cli Command](blockchain-nodes/editor/cli-command.md)
+  * [Other](blockchain-nodes/editor/other.md)
+* [BlockX](blockchain-nodes/editor-1/README.md)
+  * [Installation](blockchain-nodes/editor-1/installation.md)
+  * [Useful Command](blockchain-nodes/editor-1/useful-command.md)
+* [RaiBlocksOne](blockchain-nodes/editor-2/README.md)
+  * [Installation](blockchain-nodes/editor-2/installation.md)
+  * [RPC Command](blockchain-nodes/editor-2/rpc-command.md)
+  * [Other](blockchain-nodes/editor-2/other.md)
+* [RaiCoin](blockchain-nodes/editor-3/README.md)
+  * [Installation](blockchain-nodes/editor-3/installation.md)
+  * [Node Configuration](blockchain-nodes/editor-3/node-configuration.md)
+  * [RPC Command](blockchain-nodes/editor-3/rpc-command.md)
+  * [Other](blockchain-nodes/editor-3/other.md)
 
 ## Other
 

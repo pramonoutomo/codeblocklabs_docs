@@ -3,7 +3,7 @@ description: >-
   An EVM+Cosmos Layer 1 blockchain ecosystem built for lightning-fast
   transactions and low gas fees, welcoming developers to build dApps seamlessly,
   together
-icon: shapes
+icon: server
 ---
 
 # BlockX

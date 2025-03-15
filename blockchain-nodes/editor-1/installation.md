@@ -4,6 +4,8 @@ description: BlockX Installation
 
 # Installation
 
+
+
 {% hint style="danger" %}
 This testnet installation may already obsolete as the BloxkX already launch it's mainnet.
 {% endhint %}
@@ -38,9 +40,9 @@ cd blockx-node-public-compiled
 
 {% hint style="info" %}
 **Useful Tips**\
-_Check Version:_ blockxd version --long
+&#xNAN;_&#x43;heck Version:_ blockxd version --long
 
 _CHECK STATUS BINARY:_ systemctl status blockxd \
-_CHECK RUNNING LOGS:_ journalctl -fu blockxd -o cat \
-_CHECK LOCAL STATUS:_ curl -s localhost:26657/status | jq .result.sync\_info
+&#xNAN;_&#x43;HECK RUNNING LOGS:_ journalctl -fu blockxd -o cat \
+&#xNAN;_&#x43;HECK LOCAL STATUS:_ curl -s localhost:26657/status | jq .result.sync\_info
 {% endhint %}

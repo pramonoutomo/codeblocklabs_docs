@@ -61,7 +61,7 @@ docker restart raione-node
 {% hint style="info" %}
 **Useful Command**\
 \
-_Check Version:_ curl -g -d '{ "action": "version"}' 'localhost:7076'
+&#xNAN;_&#x43;heck Version:_ curl -g -d '{ "action": "version"}' 'localhost:7076'
 
 _Block Count_: curl -g -d '{ "action": "block\_count"}' 'localhost:7076'
 
