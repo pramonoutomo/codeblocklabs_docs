@@ -33,10 +33,10 @@ You can check all Go version available on [https://go.dev/dl/](https://go.dev/dl
 ```
 // You can check all Go version available on https://go.dev/dl/
 // For example we will install Go version 1.19.12
-gvm install go1.19.12
+gvm install go1.20
 
-// Using the go1.19.12
-gvm use go1.19.12
+// Using the go1.20
+gvm use go1.20
 ```
 
 Please note that you can use and switch between all go installed easily, as you install more Go version in one server, it may need more spaces on your disk.
