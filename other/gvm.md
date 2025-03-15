@@ -40,3 +40,33 @@ gvm use go1.20
 ```
 
 Please note that you can use and switch between all go installed easily, as you install more Go version in one server, it may need more spaces on your disk.
+
+***
+
+## Note for installing higher Go Version on GVM
+
+if you need to install go1.24.1 for example, you need to install go1.20 first, then install go1.22, then install go1.23.7, then install 1.24.1
+
+```
+// install go1.20
+gvm install go1.20
+gvm use go1.20
+
+// install go1.22
+gvm install go1.22
+gvm use go1.22
+
+//install go1.23.7
+gvm install go1.23.7
+gvm use go1.23.7
+
+//install go1.24.1
+gvm install go1.24.1
+gvm use go1.24.1
+
+// after installing the version you need, just uninstall the other go version
+gvm uninstall go1.23.7
+gvm uninstall go1.22
+gvm uninstall go1.20
+```
+
