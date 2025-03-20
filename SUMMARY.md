@@ -29,6 +29,7 @@
   * [Other](blockchain-nodes/editor-3/other.md)
 * [LayerEdge](blockchain-nodes/layeredge/README.md)
   * [Installation](blockchain-nodes/layeredge/installation.md)
+  * [Automation](blockchain-nodes/layeredge/automation.md)
 
 ## Other
 
