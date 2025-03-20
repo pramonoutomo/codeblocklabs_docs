@@ -27,6 +27,8 @@
   * [Node Configuration](blockchain-nodes/editor-3/node-configuration.md)
   * [RPC Command](blockchain-nodes/editor-3/rpc-command.md)
   * [Other](blockchain-nodes/editor-3/other.md)
+* [LayerEdge](blockchain-nodes/layeredge/README.md)
+  * [Installation](blockchain-nodes/layeredge/installation.md)
 
 ## Other
 
