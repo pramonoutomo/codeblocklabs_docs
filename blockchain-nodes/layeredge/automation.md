@@ -44,6 +44,6 @@ chmod +x auto.sh
 Run the automation
 
 ```
-./run-light-node.sh
+./auto.sh
 ```
 
