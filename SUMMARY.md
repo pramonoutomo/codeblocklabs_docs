@@ -18,6 +18,9 @@
 * [BlockX](blockchain-nodes/editor-1/README.md)
   * [Installation](blockchain-nodes/editor-1/installation.md)
   * [Useful Command](blockchain-nodes/editor-1/useful-command.md)
+* [LayerEdge](blockchain-nodes/layeredge/README.md)
+  * [Installation](blockchain-nodes/layeredge/installation.md)
+  * [Automation](blockchain-nodes/layeredge/automation.md)
 * [RaiBlocksOne](blockchain-nodes/editor-2/README.md)
   * [Installation](blockchain-nodes/editor-2/installation.md)
   * [RPC Command](blockchain-nodes/editor-2/rpc-command.md)
@@ -27,9 +30,9 @@
   * [Node Configuration](blockchain-nodes/editor-3/node-configuration.md)
   * [RPC Command](blockchain-nodes/editor-3/rpc-command.md)
   * [Other](blockchain-nodes/editor-3/other.md)
-* [LayerEdge](blockchain-nodes/layeredge/README.md)
-  * [Installation](blockchain-nodes/layeredge/installation.md)
-  * [Automation](blockchain-nodes/layeredge/automation.md)
+* [Selfchain](blockchain-nodes/editor-4/README.md)
+  * [Installation](blockchain-nodes/editor-4/installation.md)
+  * [Useful Command](blockchain-nodes/editor-4/useful-command.md)
 
 ## Other
 
