@@ -1,8 +1,8 @@
 ---
-icon: banana
 description: >-
   Banano is a feeless, instant, rich in potassium cryptocurrency powered by DAG
   technology disrupting the meme economy.
+icon: banana
 cover: ../../.gitbook/assets/ban_cover.png
 coverY: 0
 ---
