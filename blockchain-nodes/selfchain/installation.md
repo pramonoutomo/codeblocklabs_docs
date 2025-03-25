@@ -9,8 +9,8 @@ Installation
 <pre><code>// Download binaries
 wget "https://1501792788-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FcIZFCZY4EPKDYaPcDZLG%2Fuploads%2FjZ2W5fQRc1EfLuI6Sbe4%2Fselfchaind-linux-amd64?alt=media&#x26;token=a3023826-ab65-405f-8112-cf696d1be00d" -O selfchaind-linux-amd64
 <strong>// change permission
-</strong><strong>chmod +x selfchaind-linux-amd64
-</strong>// init (change moniker to your own)
+</strong>chmod +x selfchaind-linux-amd64
+// init (change moniker to your own)
 ./selfchaind-linux-amd64 init moniker
 // download genesis file
 curl -Ls https://green.codeblocklabs.com/testnet/selfchain-v2/genesis.json > $HOME/.selfchain/config/genesis.json
@@ -28,6 +28,8 @@ wait until the sync process stopped and there is an upgrade information appear.
 ```
 // Download the v2.0.0 version
 wget "https://green.codeblocklabs.com/testnet/selfchain-v2/selfchaind" -O selfchaind
+// change permission
+chmod +x selfchaind
 // open new screen
 screen -S selfchain
 // run the v2.0.0 binary
