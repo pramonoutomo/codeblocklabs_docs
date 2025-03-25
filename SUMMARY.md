@@ -33,6 +33,7 @@
 * [Selfchain](blockchain-nodes/selfchain/README.md)
   * [Installation](blockchain-nodes/selfchain/installation.md)
   * [Useful Command](blockchain-nodes/selfchain/useful-command.md)
+  * [Snapshot](blockchain-nodes/selfchain/snapshot.md)
 
 ## Other
 
