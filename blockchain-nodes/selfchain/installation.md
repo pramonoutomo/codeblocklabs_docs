@@ -43,3 +43,53 @@ curl -Ls https://green.codeblocklabs.com/testnet/selfchain-v2/addrbook.json $HOM
 ```
 
 When the nodes already synced and everything's good, request faucet on selfchain discord and create validator.
+
+***
+
+## Setting Up Services
+
+```
+// Create bin folder
+mkdir ~/bin
+// Copy binary
+cp selfchaind ~/bin/
+// Change permission
+chmod +x ~/bin/selfchaind
+// add to path
+export PATH="$PATH:/home/username/location_to_bin_folder"
+// reload shell configuration
+source ~/.bashrc
+// test
+./selfchaind version --long
+```
+
+If test was success, you can now create the services configuration file.
+
+```
+# Set Service file
+sudo tee /etc/systemd/system/selfchaind.service > /dev/null <<EOF
+[Unit]
+Description=selfchain mainnet node
+After=network-online.target
+[Service]
+User=$USER
+ExecStart=$(which selfchaind) start
+Restart=always
+RestartSec=3
+LimitNOFILE=65535
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo systemctl daemon-reload
+sudo systemctl enable selfchaind
+
+```
+
+```
+// Start the nodes on services
+sudo systemctl restart selfchaind && sudo journalctl -fu selfchaind -o cat
+
+```
+
+
+
