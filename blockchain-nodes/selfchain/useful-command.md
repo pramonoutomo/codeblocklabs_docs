@@ -58,41 +58,52 @@ Please make sure you have adjusted **moniker**, **identity**, **details** and **
 
 ```
 selfchaind tx staking create-validator \
---amount 1000000abcx \
---pubkey $(selfchaind tendermint show-validator) \
---moniker "YOUR_MONIKER_NAME" \
---identity "YOUR_KEYBASE_ID" \
---details "YOUR_DETAILS" \
---website "YOUR_WEBSITE_URL" \
---chain-id blockx_12345-2 \
---commission-rate 0.05 \
---commission-max-rate 0.20 \
---commission-max-change-rate 0.01 \
---min-self-delegation 1 \
---from wallet \
---gas-prices 0.025abcx \
--y
+  --amount "1000000uslf" \
+  --pubkey $(selfchaind tendermint show-validator) \
+  --moniker "<MONIKER>" \
+  --identity "" \
+  --details "CodeBlockLabs Community" \
+  --website "YOUR WEBSITE" \
+  --chain-id selfchain-testnet \
+  --commission-rate "0.05" \
+  --commission-max-rate "0.2" \
+  --commission-max-change-rate "0.01" \
+  --min-self-delegation "1" \
+  --gas-prices 1uslf \
+  --gas "auto" \
+  --gas-adjustment "1.5" \
+  --from wallet \
+  -y
+
 ```
 
 **Edit existing validator**
 
 ```
 selfchaind tx staking edit-validator \
---moniker "YOUR_MONIKER_NAME" \
---identity "YOUR_KEYBASE_ID" \
---details "YOUR_DETAILS" \
---website "YOUR_WEBSITE_URL"
---chain-id blockx_12345-2 \
---commission-rate 0.05 \
+--new-moniker "<MONIKER>" \
+--identity "" \
+--details "CodeBlockLabs Community" \
+--website "YOUR WEBSITE" \
+--chain-id selfchain-testnet \
+--commission-rate "0.05" \
+--gas-prices 1uslf \
+--gas "auto" \
+--gas-adjustment "1.5" \
 --from wallet \
---gas-prices 0.025abcx \
 -y
 ```
 
 **Unjail validator**
 
 ```
-selfchaind tx slashing unjail --from wallet --chain-id blockx_12345-2 --gas-adjustment 1.4 --gas-prices 0.025abcx -y
+selfchaind tx slashing unjail \
+--chain-id selfchain-testnet \
+--gas-prices 1uslf \
+--gas-adjustment 1.5 \
+--gas "auto" \
+--from wallet \
+-y 
 ```
 
 **Jail reason**
@@ -104,19 +115,19 @@ selfchaind query slashing signing-info $(selfchaind tendermint show-validator)
 **List all active validators**
 
 ```
-selfchaind q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_BONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " \t " + .description.moniker' | sort -gr | nl
+selfchaind q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_BONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " 	 " + .description.moniker' | sort -gr | nl 
 ```
 
 **List all inactive validators**
 
 ```
-selfchaind q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_UNBONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " \t " + .description.moniker' | sort -gr | nl
+selfchaind q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_UNBONDED") or .status=="BOND_STATUS_UNBONDING")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " 	 " + .description.moniker' | sort -gr | nl 
 ```
 
 **View validator details**
 
 ```
-selfchaind q staking validator $(selfchaind keys show wallet --bech val -a)
+selfchaind q staking validator $(selfchaind keys show wallet --bech val -a) 
 ```
 
 ### 💲 Token management <a href="#token-management" id="token-management"></a>
@@ -124,7 +135,7 @@ selfchaind q staking validator $(selfchaind keys show wallet --bech val -a)
 **Withdraw rewards from all validators**
 
 ```
-selfchaind tx distribution withdraw-all-rewards --from wallet --chain-id selfchain-testnet --gas-adjustment 1.4 --gas auto --fees 500uslf -y
+selfchaind tx distribution withdraw-all-rewards --from wallet --chain-id selfchain-testnet --gas-prices 1uslf  --gas-adjustment 1.5 --gas "auto" -y 
 ```
 
 **Withdraw commission and rewards from your validator**
