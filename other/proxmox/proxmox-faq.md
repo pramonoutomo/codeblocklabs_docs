@@ -101,3 +101,29 @@ iptables -t nat -A PREROUTING -p tcp -d PUBLICIP --dport 36657 -j DNAT --to-dest
 // don't forget to add the rule from firewall.sh using the 
 ```
 
+## Q: unsupported Ubuntu version '24.04'
+
+A: comment / disable enterprise repository and add the non-pve
+
+```
+nano /etc/apt/sources.list.d/ceph.list
+// add # in front of all repository listed
+// save file (CTRL + X, Y, Enter)
+
+nano /etc/apt/sources.list.d/pve-enterprise.list
+// add # in front of all repository listed
+// save file (CTRL + X, Y, Enter)
+
+nano /etc/apt/sources.list
+// add on last line:  deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription
+// save file (CTRL + X, Y, Enter)
+
+apt update
+apt full-upgrade
+// after full-upgrade success, create CT again
+```
+
+
+
+
+
