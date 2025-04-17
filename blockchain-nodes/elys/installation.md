@@ -97,10 +97,10 @@ which cosmovisor
 // save this cosmovisor binary location
 
 // create services
-<strong>sudo nano /etc/systemd/system/elys.service
+<strong>sudo nano /etc/systemd/system/elysd.service
 </strong></code></pre>
 
-{% code title="elys.service" %}
+{% code title="elysd.service" %}
 ```
     [Unit] 
     Description=Elys Network node 
@@ -130,8 +130,8 @@ which cosmovisor
 // Reload Daemon
 sudo systemctl daemon-reload
 // Enable Services
-systemctl enable elys.service
-// To check logs, use: journalctl -fu elys
+systemctl enable elysd.service
+// To check logs, use: journalctl -fu elysdd
 
 ```
 
