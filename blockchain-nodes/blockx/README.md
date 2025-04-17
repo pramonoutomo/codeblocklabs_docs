@@ -11,7 +11,7 @@ icon: server
 BlockX has made blockchain development safer and more supportive. Our community of builders is vetted, and committed to helping each succeed in the world of blockchain development
 
 * Homepages: [https://www.blockxnet.com/](https://www.blockxnet.com/)
-* Explorer: [https://ping.blockxnet.com/](https://ping.blockxnet.com/)
+* Explorer: [https://ping.blockxnet.com/](https://ping.blockxnet.com/) / [https://explorer.codeblocklabs.com/blockx](https://explorer.codeblocklabs.com/blockx)
 
 **Minimum Requirements**:
 
