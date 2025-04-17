@@ -6,347 +6,313 @@ description: >-
 
 # Useful Command
 
-### 🔑 Key management <a href="#key-management" id="key-management"></a>
+### Key Management <a href="#key" id="key"></a>
 
-**Add new key**
+Add new key
 
-```
-blockxd keys add wallet
-```
-
-**Recover existing key**
-
-```
-blockxd keys add wallet --recover
+```bash
+elysd keys add wallet
 ```
 
-**List all keys**
+Recover existing key
 
-```
-blockxd keys list
-```
-
-**Delete key**
-
-```
-blockxd keys delete wallet
+```bash
+elysd keys add wallet --recover
 ```
 
-**Export key to the file**
+List All key
 
-```
-blockxd keys export wallet
-```
-
-**Import key from the file**
-
-```
-blockxd keys import wallet wallet.backup
+```bash
+elysd keys list
 ```
 
-**Query wallet balance**
+Delete key
 
+```bash
+elysd keys delete wallet
 ```
-blockxd q bank balances $(blockxd keys show wallet -a)
+
+Export Key (save to wallet.backup)
+
+```bash
+elysd keys export wallet
 ```
 
-### 👷 Validator management <a href="#validator-management" id="validator-management"></a>
+Import key
 
-Please make sure you have adjusted **moniker**, **identity**, **details** and **website** to match your values.
-
-**Create new validator**
-
+```bash
+elysd keys import wallet wallet.backup
 ```
-blockxd tx staking create-validator \
---amount 1000000abcx \
---pubkey $(blockxd tendermint show-validator) \
---moniker "YOUR_MONIKER_NAME" \
---identity "YOUR_KEYBASE_ID" \
---details "YOUR_DETAILS" \
---website "YOUR_WEBSITE_URL" \
---chain-id blockx_12345-2 \
---commission-rate 0.05 \
---commission-max-rate 0.20 \
---commission-max-change-rate 0.01 \
---min-self-delegation 1 \
+
+Query Wallet Balance
+
+```bash
+elysd q bank balances $(elysd keys show wallet -a)
+```
+
+***
+
+### Validator Management <a href="#validator" id="validator"></a>
+
+Create Validator
+
+```bash
+elysd tx staking create-validator \
+  --amount "1000000uelys" \
+  --pubkey $(elysd tendermint show-validator) \
+  --moniker "My Node Name" \
+  --identity "My Keybase ID" \
+  --details "My Node Details" \
+  --website "YOUR WEBSITE" \
+  --chain-id elys-1 \
+  --commission-rate "0.05" \
+  --commission-max-rate "0.2" \
+  --commission-max-change-rate "0.01" \
+  --min-self-delegation "1" \
+  --gas-prices 0.0003uelys \
+  --gas "auto" \
+  --gas-adjustment "1.5" \
+  --from wallet \
+  -y
+```
+
+Edit Validator
+
+```bash
+elysd tx staking edit-validator \
+--new-moniker "My Node Name" \
+--identity "My Keybase ID" \
+--details "My Node Details" \
+--website "YOUR WEBSITE" \
+--chain-id elys-1 \
+--commission-rate "0.05" \
+--gas-prices 0.0003uelys \
+--gas "auto" \
+--gas-adjustment "1.5" \
 --from wallet \
---gas-prices 0.025abcx \
 -y
 ```
 
-**Edit existing validator**
+Unjail Validator
 
-```
-blockxd tx staking edit-validator \
---moniker "YOUR_MONIKER_NAME" \
---identity "YOUR_KEYBASE_ID" \
---details "YOUR_DETAILS" \
---website "YOUR_WEBSITE_URL"
---chain-id blockx_12345-2 \
---commission-rate 0.05 \
+```bash
+elysd tx slashing unjail \
+--chain-id elys-1 \
+--gas-prices 0.0003uelys \
+--gas-adjustment 1.5 \
+--gas "auto" \
 --from wallet \
---gas-prices 0.025abcx \
--y
+-y 
 ```
 
-**Unjail validator**
+Signing Info
 
+```bash
+elysd query slashing signing-info $(elysd tendermint show-validator) 
 ```
-blockxd tx slashing unjail --from wallet --chain-id blockx_12345-2 --gas-adjustment 1.4 --gas-prices 0.025abcx -y
-```
-
-**Jail reason**
-
-```
-blockxd query slashing signing-info $(blockxd tendermint show-validator)
-```
-
-**List all active validators**
-
-```
-blockxd q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_BONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " \t " + .description.moniker' | sort -gr | nl
-```
-
-**List all inactive validators**
-
-```
-blockxd q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_UNBONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " \t " + .description.moniker' | sort -gr | nl
-```
-
-**View validator details**
 
-```
-blockxd q staking validator $(blockxd keys show wallet --bech val -a)
-```
-
-### 💲 Token management <a href="#token-management" id="token-management"></a>
-
-**Withdraw rewards from all validators**
-
-```
-blockxd tx distribution withdraw-all-rewards --from wallet --chain-id blockx_12345-2 --gas-adjustment 1.4 --gas auto --fees 500abcx -y
-```
+List all inactive validators
 
-**Withdraw commission and rewards from your validator**
-
-```
-blockxd tx distribution withdraw-rewards $(blockxd keys show wallet --bech val -a) --commission --from wallet --chain-id blockx_12345-2 --gas-adjustment 1.4 --gas auto --fees 500abcx -y
+```bash
+elysd q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_BONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " 	 " + .description.moniker' | sort -gr | nl 
 ```
 
-**Delegate tokens to yourself**
+List all active validators
 
+```bash
+elysd q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_UNBONDED") or .status=="BOND_STATUS_UNBONDING")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " 	 " + .description.moniker' | sort -gr | nl 
 ```
-blockxd tx staking delegate $(blockxd keys show wallet --bech val -a) 1000000abcx --from wallet --chain-id blockx_12345-2 --gas-adjustment 1.4 --gas auto --fees 500abcx -y
-```
-
-**Delegate tokens to validator**
 
-```
-blockxd tx staking delegate <TO_VALOPER_ADDRESS> 1000000abcx --from wallet --chain-id blockx_12345-2 --gas-adjustment 1.4 --gas auto --fees 500abcx -y
-```
+View validators details
 
-**Redelegate tokens to another validator**
+```bash
+elysd q staking validator $(elysd keys show wallet --bech val -a) 
 
 ```
-blockxd tx staking redelegate $(blockxd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000abcx --from wallet --chain-id blockx_12345-2 --gas-adjustment 1.4 --gas auto --fees 500abcx -y
-```
 
-**Unbond tokens from your validator**
+***
 
-```
-blockxd tx staking unbond $(blockxd keys show wallet --bech val -a) 1000000abcx --from wallet --chain-id blockx_12345-2 --gas-adjustment 1.4 --gas auto --fees 500abcx -y
-```
+### Token Management <a href="#token" id="token"></a>
 
-**Send tokens to the wallet**
+Withdraw rewards from all validators
 
+```bash
+elysd tx distribution withdraw-all-rewards --from wallet --chain-id elys-1 --gas-prices 0.0003uelys  --gas-adjustment 1.5 --gas "auto" -y 
 ```
-blockxd tx bank send wallet <TO_WALLET_ADDRESS> 1000000abcx --from wallet --chain-id blockx_12345-2
-```
-
-### 🗳 Governance <a href="#governance" id="governance"></a>
 
-**List all proposals**
+Withdraw comission and rewards from your validator
 
+```bash
+elysd tx distribution withdraw-rewards $(elysd keys show wallet --bech val -a) --commission --from wallet --chain-id elys-1 --gas-prices 0.0003uelys  --gas-adjustment 1.5 --gas "auto" -y 
 ```
-blockxd  query gov proposals
-```
 
-**View proposal by id**
+Delegate to your validator
 
-```
-blockxd query gov proposal 1
+```bash
+elysd tx staking delegate $(elysd keys show wallet --bech val -a) 1000000uelys --from wallet --chain-id elys-1 --gas-prices 0.0003uelys  --gas-adjustment 1.5 --gas "auto" -y 
 ```
 
-**Vote 'Yes'**
+Delegate to other
 
+```bash
+elysd tx staking delegate TO_VALOPER_ADDRESS 1000000uelys --from wallet --chain-id elys-1 --gas-prices 0.0003uelys  --gas-adjustment 1.5 --gas "auto" -y 
 ```
-blockxd tx gov vote 1 yes --from wallet --chain-id blockx_12345-2 --gas-adjustment 1.4 --gas auto --fees 500abcx -y
-```
 
-**Vote 'No'**
+Redelegate your stake to other validators
 
-```
-blockxd tx gov vote 1 no --from wallet --chain-id blockx_12345-2 --gas-adjustment 1.4 --gas auto --fees 500abcx -y
+```bash
+elysd tx staking redelegate $(elysd keys show wallet --bech val -a) TO_VALOPER_ADDRESS 1000000uelys --from wallet --chain-id elys-1 --gas-prices 0.0003uelys  --gas-adjustment 1.5 --gas "auto" -y 
 ```
 
-**Vote 'Abstain'**
+Unbond stake
 
+```bash
+elysd tx staking unbond $(elysd keys show wallet --bech val -a) 1000000uelys --from wallet --chain-id elys-1 --gas-prices 0.0003uelys  --gas-adjustment 1.5 --gas "auto" -y 
 ```
-blockxd tx gov vote 1 abstain --from wallet --chain-id blockx_12345-2 --gas-adjustment 1.4 --gas auto --fees 500abcx -y
-```
 
-**Vote 'NoWithVeto'**
+Send tokens
 
+```bash
+elysd tx bank send wallet TO_WALLET_ADDREESS 1000000uelys --from wallet --chain-id elys-1 --gas-prices 0.0003uelys  --gas-adjustment 1.5 --gas "auto" -y 
 ```
-blockxd tx gov vote 1 nowithveto --from wallet --chain-id blockx_12345-2 --gas-adjustment 1.4 --gas auto --fees 500abcx -y
-```
 
-### ⚡️ Utility <a href="#utility" id="utility"></a>
+### Governance <a href="#governance" id="governance"></a>
 
-**Update ports**
+Create new text proposal
 
-```
-CUSTOM_PORT=28
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.blockxd/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/.nolus/config/app.toml
+```bash
+elysd tx gov submit-proposal \
+--title "New Prosposals" \
+--description "Detailed Proposal Information" \
+--deposit "1000000uelys" \
+--type "Text" \
+--from wallet \
+--gas-prices 0.0003uelys \ 
+--gas-adjustment 1.5 \
+--gas "auto" \
+-y 
 ```
 
-## **Update Indexer**
+List all proposals
 
-**Disable indexer**
-
-```
-sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.blockxd/config/config.toml
+```bash
+elysd query gov proposals
 ```
 
-**Enable indexer**
+Vote
 
+```bash
+elysd tx gov vote PROPOSAL_NUMBER yes \
+--from wallet \
+--chain-id elys-1 \
+--gas-prices 0.0003uelys \
+--gas-adjustment 1.5 \
+--gas "auto" \
+-y 
 ```
-sed -i -e 's|^indexer *=.*|indexer = "kv"|' $HOME/.blockxd/config/config.toml
-```
-
-**Update pruning**
 
-```
-sed -i \
-  -e 's|^pruning *=.*|pruning = "custom"|' \
-  -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
-  -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
-  -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
-  $HOME/.blockxd/config/app.toml
-```
+***
 
-## 🚨 Maintenance <a href="#maintenance" id="maintenance"></a>
+### Utility <a href="#utility" id="utility"></a>
 
-**Get validator info**
+Set Indexer to NULL
 
-```
-blockxd status 2>&1 | jq .ValidatorInfo
+```bash
+sed -i 's|^indexer *=.*|indexer = "null"|' $HOME/.elys/config/config.toml
 ```
 
-**Get sync info**
+Set Custom Port
 
+```bash
+CUSTOM_PORT=13
+sed -i.bak -e "s%^proxy_app = "tcp://127.0.0.1:26658"%proxy_app = "tcp://127.0.0.1:${CUSTOM_PORT}658"%; s%^laddr = "tcp://127.0.0.1:26657"%laddr = "tcp://127.0.0.1:${CUSTOM_PORT}657"%; s%^pprof_laddr = "localhost:6060"%pprof_laddr = "localhost:${CUSTOM_PORT}060"%; s%^laddr = "tcp://0.0.0.0:26656"%laddr = "tcp://0.0.0.0:${CUSTOM_PORT}656"%; s%^prometheus_listen_addr = ":26660"%prometheus_listen_addr = ":${CUSTOM_PORT}660"%" $HOME/.elys/config/config.toml
+sed -i.bak -e "s%^address = "tcp://0.0.0.0:1317"%address = "tcp://0.0.0.0:${CUSTOM_PORT}317"%; s%^address = ":8080"%address = ":${CUSTOM_PORT}080"%; s%^address = "0.0.0.0:9090"%address = "0.0.0.0:${CUSTOM_PORT}090"%; s%^address = "0.0.0.0:9091"%address = "0.0.0.0:${CUSTOM_PORT}091"%; s%^address = "0.0.0.0:8545"%address = "0.0.0.0:${CUSTOM_PORT}545"%; s%^ws-address = "0.0.0.0:8546"%ws-address = "0.0.0.0:${CUSTOM_PORT}546"%" $HOME/.elys/config/app.toml
 ```
-blockxd status 2>&1 | jq .SyncInfo
-```
 
-**Get node peer**
+Get Validator info
 
-```
-echo $(blockxd tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat $HOME/.blockxd/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+```bash
+elysd status 2>&1 | jq .ValidatorInfo
 ```
 
-**Check if validator key is correct**
+Get denom info
 
+```bash
+elysd q bank denom-metadata -oj | jq
 ```
-[[ $(blockxd q staking validator $(blockxd keys show wallet --bech val -a) -oj | jq -r .consensus_pubkey.key) = $(blockxd status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
-```
 
-**Get live peers**
+Get sync status
 
-```
-curl -sS http://localhost:25657/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
+```bash
+elysd status 2>&1 | jq .SyncInfo.catching_up
 ```
 
-**Set minimum gas price**
+Get latest height
 
+```bash
+elysd status 2>&1 | jq .SyncInfo.latest_block_height
 ```
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025unls\"/" $HOME/.blockxd/config/app.toml
-```
 
-**Enable prometheus**
+Reset Node
 
-```
-sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.blockxd/config/config.toml
+```bash
+elysd tendermint unsafe-reset-all --home $HOME/.elys --keep-addr-book
 ```
 
-**Reset chain data**
+Delete Node
 
+```bash
+cd $HOME && sudo systemctl stop elysd && sudo systemctl disable elysd && sudo rm /etc/systemd/system/elysd.service && sudo systemctl daemon-reload && sudo rm -rf $(which elysd) && sudo rm -rf $HOME/.elys && sudo rm -rf $(which elysd) 
 ```
-blockxd tendermint unsafe-reset-all --home $HOME/.blockxd --keep-addr-book
-```
-
-**Remove node**
 
-Please, before proceeding with the next step! All chain data will be lost! Make sure you have backed up your **priv\_validator\_key.json**!
+***
 
-```
-cd $HOME
-sudo systemctl stop blockxd 
-sudo systemctl disable blockxd 
-sudo rm /etc/systemd/system/blockxd.service
-sudo systemctl daemon-reload
-rm -f $(which blockxd)
-rm -rf $HOME/.blockxd
-rm -rf $HOME/blockx-node-public-compiled
-```
+### Services Management <a href="#services" id="services"></a>
 
-### ⚙️ Service Management <a href="#service-management" id="service-management"></a>
+Reload Service
 
-**Reload service configuration**
-
-```
+```bash
 sudo systemctl daemon-reload
 ```
 
-**Enable service**
+Enable Service
 
-```
-sudo systemctl enable blockx
-```
-
-**Disable service**
-
-```
-sudo systemctl disable blockx
+```bash
+sudo systemctl enable elysd
 ```
 
-**Start service**
+Disable Service
 
-```
-sudo systemctl start blockx
-```
-
-**Stop service**
-
-```
-sudo systemctl stop blockx
+```bash
+sudo systemctl disable elysd
 ```
 
-**Restart service**
+Start Service
 
-```
-sudo systemctl restart blockx
-```
-
-**Check service status**
-
-```
-sudo systemctl status blockx
+```bash
+sudo systemctl start elysd
 ```
 
-**Check service logs**
+Stop Service
 
+```bash
+sudo systemctl stop elysd
 ```
-sudo journalctl -u blockx -f --no-hostname -o cat
+
+Restart Service
+
+```bash
+sudo systemctl restart elysd
+```
+
+Check Service Status
+
+```bash
+sudo systemctl status elysd
+```
+
+Check Service Logs
+
+```bash
+sudo journalctl -u elysd -f --no-hostname -o cat
 ```

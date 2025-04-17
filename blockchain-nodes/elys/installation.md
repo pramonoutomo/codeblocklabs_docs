@@ -146,17 +146,19 @@ sudo apt-get install snapd lz4 -y
 
 The latest snapshot : `elys_snapshot_(todaydate).tar.lz4`
 
+`for example filename:` elys\_snapshot\_2025-04-17.tar.lz4
+
 ```
 // Download
-curl -L elys_snapshot_(todaydate).tar.lz4 | tar -Ilz4 -xf - -C $HOME/.elys
+curl -L https://green.codeblocklabs.com/mainnet/elys/elys_snapshot_(todaydate).tar.lz4 | tar -Ilz4 -xf - -C $HOME/.elys
 
 ```
 
 {% hint style="info" %}
 **Useful Tips**\
-&#xNAN;_&#x43;heck Version:_ blockxd version --long
+&#xNAN;_&#x43;heck Version:_ elysd version --long
 
-_CHECK STATUS BINARY:_ systemctl status blockxd \
-&#xNAN;_&#x43;HECK RUNNING LOGS:_ journalctl -fu blockxd -o cat \
+_CHECK STATUS BINARY:_ systemctl status elysd \
+&#xNAN;_&#x43;HECK RUNNING LOGS:_ journalctl -fu elysd -o cat \
 &#xNAN;_&#x43;HECK LOCAL STATUS:_ curl -s localhost:26657/status | jq .result.sync\_info
 {% endhint %}
