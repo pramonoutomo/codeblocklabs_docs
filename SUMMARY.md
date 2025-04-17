@@ -39,8 +39,9 @@
 
 * [Automation Scripts](other/automation-scripts/README.md)
   * [Auto Send](other/automation-scripts/auto-send.md)
-* [GVM](other/gvm.md)
+* [Blockchain Explorer](other/blockchain-explorer.md)
+* [Go Version Manager (Multi Go)](other/gvm.md)
+* [NodeJS](other/nodejs.md)
 * [Proxmox](other/proxmox/README.md)
   * [Proxmox Installation](other/proxmox/proxmox-installation.md)
   * [Proxmox FAQ](other/proxmox/proxmox-faq.md)
-* [NodeJS](other/nodejs.md)
