@@ -41,6 +41,11 @@
   * [Installation](blockchain-nodes/selfchain/installation.md)
   * [Useful Command](blockchain-nodes/selfchain/useful-command.md)
   * [Snapshot](blockchain-nodes/selfchain/snapshot.md)
+* [Symphony](blockchain-nodes/symphony/README.md)
+  * [Installation](blockchain-nodes/symphony/installation.md)
+  * [Useful Command](blockchain-nodes/symphony/useful-command.md)
+  * [Snapshot](blockchain-nodes/symphony/snapshot.md)
+  * [Oracle](blockchain-nodes/symphony/oracle.md)
 
 ## Other
 

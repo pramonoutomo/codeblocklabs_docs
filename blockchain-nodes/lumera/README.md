@@ -8,7 +8,7 @@ icon: server
 The Lumera Protocol is a layer-1 blockchain that provides developers and users with critical tools to elevate projects to the next level.
 
 * Homepages: [https://lumera.io/](https://lumera.io/)
-* Explorer: [https://explorer.codeblocklabs.com/lumera](https://explorer.codeblocklabs.com/lumera)
+* Explorer: [https://explorer.codeblocklabs.com/lumera-testnet](https://explorer.codeblocklabs.com/lumera-testnet)
 
 **Social Media**
 
