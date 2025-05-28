@@ -46,6 +46,7 @@
   * [Useful Command](blockchain-nodes/symphony/useful-command.md)
   * [Snapshot](blockchain-nodes/symphony/snapshot.md)
   * [Oracle](blockchain-nodes/symphony/oracle.md)
+  * [Patch](blockchain-nodes/symphony/patch.md)
 
 ## Other
 
