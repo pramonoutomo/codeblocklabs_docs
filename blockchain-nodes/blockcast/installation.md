@@ -82,7 +82,7 @@ cd blockcast
 docker compose up -d
 ```
 
-* Note: Before procceding to run node, make sure port `8080` is not in-use. If so, open configuration file with `nano docker-compose.yml` and change the port to `8081` by replacing `8080:8080` with `8081:8080`.
+* Note: Before procceding to run node, make sure port `18080` is not in-use. If so, open configuration file with `nano docker-compose.yml` and change the port to other, for example to `18081` by replacing `18080:8080` with `18081:8080`.
 
 ***
 
