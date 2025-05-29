@@ -6,11 +6,11 @@ description: BlockCast Installation
 
 **Windows Users**:
 
-* Must install Ubuntu on Windows using this [guide](https://github.com/0xmoei/Install-Linux-on-Windows), then continue further steps.
+* Must install Ubuntu on Windows using this [guide](https://documentation.codeblocklabs.com/other/wsl), then continue further steps.
 
 **VPS Users**:
 
-* Get your cheap vps from [Contabo](https://lihat.info/contabo), [Vultr](https://lihat.info/vultr) or [VpsAG](https://lihat.info/vpsag)
+* Get your cheap vps from [Contabo](https://lihat.info/contabo), [Vultr](https://lihat.info/vultr) or [VpsAG](https://lihat.info/vpsag)&#x20;
 
 ***
 
