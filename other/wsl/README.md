@@ -91,5 +91,6 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 docker --version
 ```
 
-_**Optional: To install more packages, please check this.**_
+_**Optional: To install more packages,**_ [_**please check this.**_](https://documentation.codeblocklabs.com/other/wsl/linux-packages)
 
+\*\*this pages based on [0xmoei post](https://github.com/0xmoei/Install-Linux-on-Windows).
