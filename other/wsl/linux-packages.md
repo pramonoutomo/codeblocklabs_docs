@@ -131,4 +131,12 @@ sudo apt install htop
 htop
 ```
 
+### bench
+
+See your machine benchmark
+
+```
+wget -qO- bench.sh | bash
+```
+
 \*\*this pages based on [0xmoei post](https://github.com/0xmoei/Linux_Node_Guide/blob/main/linux-config.md).
