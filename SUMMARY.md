@@ -58,3 +58,5 @@
 * [Proxmox](other/proxmox/README.md)
   * [Proxmox Installation](other/proxmox/proxmox-installation.md)
   * [Proxmox FAQ](other/proxmox/proxmox-faq.md)
+* [WSL](other/wsl/README.md)
+  * [Linux Packages](other/wsl/linux-packages.md)
