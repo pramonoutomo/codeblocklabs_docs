@@ -136,7 +136,13 @@ htop
 See your machine benchmark
 
 ```
+# Method 1
 wget -qO- bench.sh | bash
+
+# Method 2
+curl -Lso- bench.sh | bash
+
+// you can choose any 1 of above command, it's should works same.
 ```
 
 \*\*this pages based on [0xmoei post](https://github.com/0xmoei/Linux_Node_Guide/blob/main/linux-config.md).
