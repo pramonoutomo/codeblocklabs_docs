@@ -67,7 +67,7 @@ To get started, [register in Dashboard](https://app.blockcast.network/?referral-
 ### Install
 
 ```
-git clone https://github.com/0xmoei/blockcast
+git clone https://github.com/pramonoutomo/blockcast
 ```
 
 ```
