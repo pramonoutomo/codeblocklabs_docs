@@ -15,6 +15,8 @@
   * [RPC Command](blockchain-nodes/banano/rpc-command.md)
   * [Cli Command](blockchain-nodes/banano/cli-command.md)
   * [Other](blockchain-nodes/banano/other.md)
+* [BlockCast](blockchain-nodes/blockcast/README.md)
+  * [Installation](blockchain-nodes/blockcast/installation.md)
 * [BlockX](blockchain-nodes/blockx/README.md)
   * [Installation](blockchain-nodes/blockx/installation.md)
   * [Useful Command](blockchain-nodes/blockx/useful-command.md)

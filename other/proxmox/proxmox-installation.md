@@ -78,7 +78,7 @@ apt full-upgrade  # Update system
    2.  example of client network\
 
 
-       <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 6. Setup VM Templates
    1. go to CT Templates Menu\
       ![](<../../.gitbook/assets/image (5).png>)
