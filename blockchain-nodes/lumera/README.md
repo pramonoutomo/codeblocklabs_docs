@@ -21,9 +21,9 @@ The Lumera Protocol is a layer-1 blockchain that provides developers and users w
 **Minimum Requirements**:
 
 * **CPU**:
-  * Core: 8+ (x86\_64 architecture)
-* **RAM**: 32Gb+
-* **Storage**: 2Tb+ SSD NVME
+  * Core: 4+ (x86\_64 architecture)
+* **RAM**: 8Gb+
+* **Storage**: 120Gb+ SSD NVME
 * **Connection:** 1 Gbps dedicated line
 * **Software**:
   * Golang go1.24.2 linux/amd64
