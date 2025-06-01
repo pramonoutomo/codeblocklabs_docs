@@ -9,6 +9,8 @@
 
 ## Blockchain Nodes
 
+* [Aztec Network](blockchain-nodes/aztec-network/README.md)
+  * [Installation](blockchain-nodes/aztec-network/installation.md)
 * [Banano](blockchain-nodes/banano/README.md)
   * [Installation](blockchain-nodes/banano/installation.md)
   * [Node Configuration](blockchain-nodes/banano/node-configuration.md)
@@ -23,6 +25,7 @@
 * [Elys](blockchain-nodes/elys/README.md)
   * [Installation](blockchain-nodes/elys/installation.md)
   * [Useful Command](blockchain-nodes/elys/useful-command.md)
+* [Ethereum](blockchain-nodes/ethereum.md)
 * [LayerEdge](blockchain-nodes/layeredge/README.md)
   * [Installation](blockchain-nodes/layeredge/installation.md)
   * [Automation](blockchain-nodes/layeredge/automation.md)
