@@ -11,6 +11,7 @@
 
 * [Aztec Network](blockchain-nodes/aztec-network/README.md)
   * [Installation](blockchain-nodes/aztec-network/installation.md)
+  * [Auto Restart](blockchain-nodes/aztec-network/auto-restart.md)
 * [Banano](blockchain-nodes/banano/README.md)
   * [Installation](blockchain-nodes/banano/installation.md)
   * [Node Configuration](blockchain-nodes/banano/node-configuration.md)

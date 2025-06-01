@@ -21,4 +21,4 @@ Sequencer Nodes Requirement
 * CPU 4 Core+
 * RAM 8Gb
 * Disk 120Gb (NVME Recomended)
-* Sepolia RPC (Click Here To Setup Your Own RPC or Rent RPC Access From 3rd Party)
+* Sepolia RPC ([Click Here To Setup Your Own RPC](https://documentation.codeblocklabs.com/blockchain-nodes/ethereum) (Recomended) or [Rent RPC Access From 3rd Party](https://blockpi.io/))
