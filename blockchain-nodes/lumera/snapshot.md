@@ -12,7 +12,7 @@ sudo apt-get install snapd lz4 -y
 ```bash
 # Stop the service and reset the data
 sudo systemctl stop lumerad
-cp $HOME/.lumera/data/priv_validator_state.json $HOME/.selfchain/priv_validator_state.json.backup
+cp $HOME/.lumera/data/priv_validator_state.json $HOME/.lumera/priv_validator_state.json.backup
 rm -rf $HOME/.lumera/data
 ```
 
