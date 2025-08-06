@@ -1,5 +1,5 @@
 ---
-description: Symphony Testnet
+description: Symphony Mainnet
 ---
 
 # Installation
@@ -14,17 +14,17 @@ sudo apt-get upgrade
 
 // Install Go
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.24.2.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.24.5.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 
 // Download binaries
 mkdir -p $HOME/.symphonyd/cosmovisor/genesis/bin
-wget -O $HOME/.symphonyd/cosmovisor/genesis/bin/symphonyd https://green.codeblocklabs.com/testnet/symphony/symphonyd-0.5.0-2-gedb91e0b4
+wget -O $HOME/.symphonyd/cosmovisor/genesis/bin/symphonyd https://green.codeblocklabs.com/mainnet/symphony/symphonyd
 chmod +x $HOME/.symphonyd/cosmovisor/genesis/bin/symphonyd
 
 // Create application symlinks
-ln -s $HOME/.symphonyd/cosmovisor/genesis $HOME/.lumera/cosmovisor/current -f
+ln -s $HOME/.symphonyd/cosmovisor/genesis $HOME/.symphonyd/cosmovisor/current -f
 sudo ln -s $HOME/.symphonyd/cosmovisor/current/bin/symphonyd /usr/local/bin/symphonyd -f
 ```
 

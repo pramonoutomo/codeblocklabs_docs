@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Oracle
 
 #### Install Oracle <a href="#install-oracle" id="install-oracle"></a>
