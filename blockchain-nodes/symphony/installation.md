@@ -1,5 +1,5 @@
 ---
-description: Symphony Mainnet
+description: Symphony Mainnet.
 ---
 
 # Installation
