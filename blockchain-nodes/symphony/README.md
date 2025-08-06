@@ -25,6 +25,6 @@ Symphony is a chain built on Cosmos that provides a crypto-native solution for r
 * **Storage**: 1Tb+ SSD NVME
 * **Connection:** 1 Gbps dedicated line
 * **Software**:
-  * Golang go1.22.3 linux/amd64
+  * Golang go1.24.5 linux/amd64
   * Linux Ubuntu Version : 22.04 LTS
 * Recomended VPS: [Contabo ](https://lihat.info/contabo)/ [Vultr](https://lihat.info/vultr)
