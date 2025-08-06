@@ -1,5 +1,5 @@
 ---
-description: Symphony Testnet
+description: Symphony Mainnet
 icon: server
 ---
 
