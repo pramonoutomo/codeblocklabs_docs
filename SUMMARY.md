@@ -30,7 +30,7 @@
 * [BitBadges](blockchain-nodes/bitbadges/README.md)
   * [Installation](blockchain-nodes/bitbadges/installation.md)
   * [Useful Command](blockchain-nodes/bitbadges/useful-command.md)
-  * [Snapshots](blockchain-nodes/bitbadges/snapshots.md)
+  * [Snapshot](blockchain-nodes/bitbadges/snapshot.md)
 * [Elys](blockchain-nodes/elys/README.md)
   * [Installation](blockchain-nodes/elys/installation.md)
   * [Useful Command](blockchain-nodes/elys/useful-command.md)
