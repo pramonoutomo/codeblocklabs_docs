@@ -35,6 +35,8 @@
   * [Installation](blockchain-nodes/elys/installation.md)
   * [Useful Command](blockchain-nodes/elys/useful-command.md)
 * [Ethereum](blockchain-nodes/ethereum.md)
+* [Intento](blockchain-nodes/intento/README.md)
+  * [Installation](blockchain-nodes/intento/installation.md)
 * [LayerEdge](blockchain-nodes/layeredge/README.md)
   * [Installation](blockchain-nodes/layeredge/installation.md)
   * [Automation](blockchain-nodes/layeredge/automation.md)
