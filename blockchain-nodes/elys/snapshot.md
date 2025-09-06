@@ -1,7 +1,7 @@
 # Snapshot
 
 ```
-sudo systemctl stop elysd
+sudo systemctl stop elys
 
 # Backup priv_validator_state.json
 cp $HOME/.elys/data/priv_validator_state.json $HOME/.elys/priv_validator_state.json.backup
@@ -16,6 +16,6 @@ curl -L https://green.codeblocklabs.com/mainnet/elys/backup_latest.tar.gz | tar 
 mv $HOME/.elys/priv_validator_state.json.backup $HOME/.elys/data/priv_validator_state.json
 
 # Restart node
-sudo systemctl restart elysd && sudo journalctl -u elysd -f
+sudo systemctl restart elys && sudo journalctl -u elys -f
 
 ```
