@@ -33,6 +33,7 @@
   * [Snapshot](blockchain-nodes/bitbadges/snapshot.md)
 * [Elys](blockchain-nodes/elys/README.md)
   * [Installation](blockchain-nodes/elys/installation.md)
+  * [Snapshot](blockchain-nodes/elys/snapshot.md)
   * [Useful Command](blockchain-nodes/elys/useful-command.md)
 * [Ethereum](blockchain-nodes/ethereum.md)
 * [Intento](blockchain-nodes/intento/README.md)
