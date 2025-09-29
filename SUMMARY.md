@@ -69,6 +69,10 @@
   * [Snapshot](blockchain-nodes/symphony/snapshot-1.md)
   * [Oracle](blockchain-nodes/symphony/oracle.md)
   * [Patch](blockchain-nodes/symphony/patch.md)
+* [Tellor](blockchain-nodes/tellor/README.md)
+  * [Installation](blockchain-nodes/tellor/installation.md)
+  * [Useful Command](blockchain-nodes/tellor/useful-command.md)
+  * [Snapshots](blockchain-nodes/tellor/snapshots.md)
 
 ## Other
 
