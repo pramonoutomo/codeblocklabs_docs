@@ -17,7 +17,7 @@ republicd comet unsafe-reset-all --home $HOME/.republic --keep-addr-book
 ```
 
 ```plaintext
-curl -L https://45.76.1.67/republic/latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.republic
+curl -L http://45.76.1.67/republic/latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.republic
 ```
 
 ```plaintext
