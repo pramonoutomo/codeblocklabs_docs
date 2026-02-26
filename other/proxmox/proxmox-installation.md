@@ -71,19 +71,16 @@ apt full-upgrade  # Update system
     ```
 
 5. Setup Network Configuration on Host
-   1.  example of host network\
-
+   1.  example of host network<br>
 
        <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
-   2.  example of client network\
-
+   2.  example of client network<br>
 
        <figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 6. Setup VM Templates
    1. go to CT Templates Menu\
       ![](<../../.gitbook/assets/image (5).png>)
-   2.  select template you want to download and add to your proxmox, you can choose any operating system ISO from here.\
-
+   2.  select template you want to download and add to your proxmox, you can choose any operating system ISO from here.<br>
 
        <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 7. If your VM/CT can't connect to internet, use post routing command, make sure to chane the IP to your own local ip settings before.

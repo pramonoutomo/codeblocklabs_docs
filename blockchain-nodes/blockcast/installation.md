@@ -133,7 +133,6 @@ docker compose exec blockcastd blockcastd init
 * Register your Node. Make sure you choose the right location of your machine.
 *   Wait a few minutes until your node turn **Online.**
 
-    \
-
+    <br>
 
     <figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
