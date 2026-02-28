@@ -22,7 +22,7 @@ go version
 # Download Binary
 cd $HOME
 mkdir -p ~/go/bin
-wget https://github.com/RepublicAI/networks/raw/refs/heads/main/testnet/releases/v0.1.0/republicd-linux-amd64 -O republicd
+wget https://github.com/RepublicAI/networks/raw/refs/heads/main/testnet/releases/v0.3.0/republicd-linux-amd64 -O republicd
 chmod +x republicd
 mv republicd ~/go/bin/
 ```

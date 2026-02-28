@@ -95,6 +95,7 @@
 * [Other](other/other/README.md)
   * [Docker User non root](other/other/docker-user-non-root.md)
   * [Ubuntu User](other/other/ubuntu-user.md)
+  * [GLIBC Problem & Solution](other/other/glibc-problem-and-solution.md)
 * [Proxmox](other/proxmox/README.md)
   * [Proxmox Installation](other/proxmox/proxmox-installation.md)
   * [Proxmox FAQ](other/proxmox/proxmox-faq.md)
