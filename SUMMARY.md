@@ -98,6 +98,8 @@
   * [GLIBC Problem & Solution](other/other/glibc-problem-and-solution.md)
 * [Proxmox](other/proxmox/README.md)
   * [Proxmox Installation](other/proxmox/proxmox-installation.md)
+  * [Proxmox on Hetzner](other/proxmox/proxmox-on-hetzner.md)
+  * [Proxmox GUI Login Issue](other/proxmox/proxmox-gui-login-issue.md)
   * [Proxmox FAQ](other/proxmox/proxmox-faq.md)
   * [Increase Disk](other/proxmox/increase-disk.md)
 * [WSL](other/wsl/README.md)
