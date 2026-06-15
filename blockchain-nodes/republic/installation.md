@@ -34,8 +34,8 @@ republicd init "Your_Nodes_Name" --chain-id raitestnet_77701-1
 
 ```bash
 # download genesis and addrbook
-wget -O $HOME/.republic/config/genesis.json http://45.76.1.67/republic/genesis.json
-wget -O $HOME/.republic/config/addrbook.json http://45.76.1.67/republic/addrbook.json
+wget -O $HOME/.republic/config/genesis.json https://backup.codeblocklabs.com/republic/genesis.json
+wget -O $HOME/.republic/config/addrbook.json https://backup.codeblocklabs.com/republic/addrbook.json
 ```
 
 ```bash
