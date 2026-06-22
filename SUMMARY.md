@@ -35,6 +35,8 @@
   * [Installation](blockchain-nodes/elys/installation.md)
   * [Snapshot](blockchain-nodes/elys/snapshot.md)
   * [Useful Command](blockchain-nodes/elys/useful-command.md)
+* [Empeiria](blockchain-nodes/empeiria/README.md)
+  * [Cheatshee](blockchain-nodes/empeiria/cheatshee.md)
 * [Ethereum](blockchain-nodes/ethereum.md)
 * [Intento](blockchain-nodes/intento/README.md)
   * [Installation](blockchain-nodes/intento/installation.md)
